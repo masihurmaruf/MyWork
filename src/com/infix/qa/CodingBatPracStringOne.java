@@ -19,6 +19,27 @@ public class CodingBatPracStringOne {
 
 
 	}
+	public static boolean frontAgain(String str){
+		String frontAgain ;
+		String frontAgainLast ;
+		if(str.length()>2){
+			frontAgain = str.substring(0, 2);
+			frontAgainLast = str.substring(str.length()-2, str.length());
+			if (frontAgain.equals(frontAgainLast)){
+		
+				System.out.println("true");
+				return true;
+			}
+			else{
+				System.out.println("false");
+				return false;
+			}
+		}
+		else{
+			System.out.println("false");
+			return false;
+		}
+	}
 	public static String conCat(String a, String b){
 		String concatOne="a";
 		String concatTwo="b";
