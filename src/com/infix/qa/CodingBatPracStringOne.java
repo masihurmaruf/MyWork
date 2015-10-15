@@ -19,6 +19,47 @@ public class CodingBatPracStringOne {
 
 
 	}
+	public static String withoutX(String str){
+		if(str.startsWith("x")){
+			if(str.endsWith("x")){
+				return str.substring(0, str.length()-1);
+			}
+			else{
+					return str.substring(1);
+				}
+			
+		}
+		else if(str.endsWith("x")){
+			return str.substring(0, str.length()-1);
+		}
+		else{
+			return str;
+		}
+		
+	}
+	public static String without2(String str){
+		String str1 ;
+		String str2 ;
+		if(str.length()==1){
+			return str;
+		}
+		else if(str.isEmpty()){
+			return "";
+		}
+		else if(str.length()>2){
+			str1 =  str.substring(0, 2);
+			str2 = str.substring(str.length()-2, str.length());
+			if(str1.equals(str2)){
+		
+				return str.substring(2);
+			}
+			else{
+				return "";
+			}
+		}
+		
+		
+	}
 	public static boolean frontAgain(String str){
 		String frontAgain ;
 		String frontAgainLast ;
